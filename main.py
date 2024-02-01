@@ -8,5 +8,6 @@ def read_root():
 
 # パラメータを作成する
 @app.get("/items/{item_id}")
-def read_item():
+def read_item(item_id):
+    return{"item_id":item_id, "item_name":"Tシャツ"}
     
