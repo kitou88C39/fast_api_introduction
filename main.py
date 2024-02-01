@@ -32,6 +32,6 @@ class Item(BaseModel):
     description: Union[str, Nome] = Nome
 
 @app.post("/items/")
-def create_item(item):
+def create_item(item: Item):
     print(f"データを登録します:{item.name},{item.price},{item.description}")
     return item
