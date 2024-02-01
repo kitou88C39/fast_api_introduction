@@ -11,3 +11,6 @@ def read_root():
 def read_item(item_id):
     return{"item_id":item_id, "item_name":"Tシャツ"}
     
+# クエリパラメータを作成する
+@app.get("/items")
+def read_item():
