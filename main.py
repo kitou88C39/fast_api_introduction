@@ -22,6 +22,7 @@ def read_items(skip: int = 0, limit: Annotated[int, Query(ge=1, le=10)]=10):
 # POSTを使ってリクエストボディを使う方法
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing import Union
 
 app = FastAPI()
 
@@ -29,3 +30,6 @@ class Item(BaseModel):
     name: str
     price: float
     description: Union[str, Nome] = Nome
+
+@app.post("/items/")
+def create_item():
