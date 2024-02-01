@@ -18,3 +18,9 @@ items = ["Tシャツ","スカート","ブーツ"]
 @app.get("/items")
 def read_items(skip: int = 0, limit: Annotated[int, Query(ge=1, le=10)]=10):
     return {"item": items[skip : skip + limit]}
+
+# POSTを使ってリクエストボディを使う方法
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
