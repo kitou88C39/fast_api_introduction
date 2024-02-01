@@ -5,3 +5,8 @@ app = FastAPI()
 @app.get("/") # HTTPリクエストメソッド GETに対する関数
 def read_root():
     return {"message": "APIです"}
+
+# パラメータを作成する
+@app.get("/items/{item_id}")
+def read_item():
+    
