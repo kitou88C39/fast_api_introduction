@@ -12,5 +12,8 @@ def read_item(item_id):
     return{"item_id":item_id, "item_name":"Tシャツ"}
     
 # クエリパラメータを作成する
+items = ["Tシャツ","スカート","ブーツ"]
+
 @app.get("/items")
-def read_item():
+def read_item(skip, limit):
+    return items[skip:skip + limit]
