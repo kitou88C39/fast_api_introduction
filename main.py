@@ -16,5 +16,5 @@ app = FastAPI()
 items = ["Tシャツ","スカート","ブーツ"]
 
 @app.get("/items")
-def read_item(skip, limit):
+def read_items(skip: int = 0, limit: Annotated[int, Query(ge=1, le=10)]=10):
     return {"item": items[skip : skip + limit]}
