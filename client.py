@@ -26,9 +26,9 @@ print(res.text)
 # ヘッダーとはリクエストやレスポンスにおいて付加情報を伝えるもの
 import requests
 
-res = requests.post(
+res = requests.get(
     "http://127.0.0.1:8000/sample/",
-    json={"name": "Tシャツ", "price":2000, "description":"白Tシャツ"},
+    headers={"authorization": "Bearer: A1B2C3D4"},
 )
 
 print(res.status_code)
