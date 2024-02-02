@@ -38,8 +38,9 @@ def create_item(item: Item):
 
 # ヘッダーとはリクエストやレスポンスにおいて付加情報を伝えるもの
 from fastapi import FastAPI, Header
+from typing import Union
 
 app = FastAPI()
 
 @app.get("/sample/")
-def read_sample(authorization: Union[str, Nome]):
+def read_sample(authorization: Union[str, Nome]= Header(defalut=Nome)):
