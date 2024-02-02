@@ -50,3 +50,12 @@ def read_sample(
     print(authorization)
     response.headers["custom-header"]="12345"
     return {"message":"ヘッダー情報を取得する"}
+
+# 非同期処理
+from fastapi import FastAPI
+import asyncio
+
+app = FastAPI()
+
+@app.get("/sleep_time/")
+def sleep_time(sec: int):
