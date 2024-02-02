@@ -35,3 +35,8 @@ class Item(BaseModel):
 def create_item(item: Item):
     print(f"データを登録します:{item.name},{item.price},{item.description}")
     return item
+
+# ヘッダーとはリクエストやレスポンスにおいて付加情報を伝えるもの
+from fastapi import FastAPI
+
+app = FastAPI()
