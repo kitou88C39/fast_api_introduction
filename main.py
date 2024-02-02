@@ -46,7 +46,7 @@ app = FastAPI()
 def read_sample(
     response: Response,
     authorization: Union[str, Nome]= Header(defalut=Nome)
-    ):
+):
     print(authorization)
     response.headers["custom-header"]="12345"
     return {"message":"ヘッダー情報を取得する"}
