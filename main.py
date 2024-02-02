@@ -42,4 +42,4 @@ from fastapi import FastAPI, Header
 app = FastAPI()
 
 @app.get("/sample/")
-def read_sample():
+def read_sample(authorization: Union[str, Nome]):
