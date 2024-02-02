@@ -33,3 +33,9 @@ res = requests.get(
 print(res.status_code)
 print(res.text)
 print(res.headers)
+
+# 非同期処理
+import requests
+import asyncio
+import time
+
