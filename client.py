@@ -39,6 +39,10 @@ import requests
 import asyncio
 import time
 
+asyncio def main()
+    print(f"main開始{time.strftime('%X')}")
+    print(f"main終了{time.strftime('%X')}")
+
 if __name__=="__main__":
     asyncio.run(main())
 
