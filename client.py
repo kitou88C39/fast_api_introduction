@@ -32,3 +32,4 @@ res = requests.get(
 
 print(res.status_code)
 print(res.text)
+print(res.headers)
