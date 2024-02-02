@@ -44,3 +44,4 @@ app = FastAPI()
 
 @app.get("/sample/")
 def read_sample(authorization: Union[str, Nome]= Header(defalut=Nome)):
+    return {"message":"ヘッダー情報を取得する"}
