@@ -37,6 +37,9 @@ def create_item(item: Item):
     return item
 
 # ヘッダーとはリクエストやレスポンスにおいて付加情報を伝えるもの
-from fastapi import FastAPI
+from fastapi import FastAPI, Header
 
 app = FastAPI()
+
+@app.get("/sample/")
+def read_sample():
